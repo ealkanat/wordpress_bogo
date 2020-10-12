@@ -17,7 +17,7 @@ function bogo_calculate(){
     $x_quantity = 2; //when bogo will start
     $total_item = 0;
     $prices = Array();
-    $excluding_cats = Array('WALLABY');
+    $excluding_cats = Array('CATNAME');
 
     foreach ( $cart->get_cart() as $cart_item_key => $cart_item ) {
 
