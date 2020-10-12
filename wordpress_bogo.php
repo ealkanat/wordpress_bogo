@@ -13,8 +13,8 @@ function bogo_calculate(){
     $cart = WC()->cart;
     if ( $cart->is_empty() ) return;
 
-    $fee_desc = '2 al 1 öde kampanyası';
-    $x_quantity = 2; //when bogo will start
+    $fee_desc = 'Buy 1 get 1 free';
+    $x_quantity = 2; //when bogo start
     $total_item = 0;
     $prices = Array();
     $excluding_cats = Array('CATNAME');
@@ -40,12 +40,6 @@ function bogo_calculate(){
      }
      
      if($total_item >= $x_quantity){
-        // $fees = $cart->get_fees();
-        // foreach ($fees as $key) {
-        //     if($fees[$key]->name === $fee_desc) {
-        //         unset($fees[$key]);
-        //     }
-        // }
         $lowestprice = min($prices);
         $lowestprice *= -1;
         $cart->add_fee( $fee_desc, $lowestprice, true);
