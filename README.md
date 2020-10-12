@@ -1,4 +1,4 @@
-# wordpress_bogo
+# Wordpress BOGO
 Wordpress Buy One Get One (Bogo) without plugin.
 
 This code will help to create buy one get one campaign for woocommerce without buying a plugin.
